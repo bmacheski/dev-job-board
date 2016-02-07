@@ -1,0 +1,30 @@
+<div class="form">
+  <h1>Post a Job</h1>
+  <%= form_for(@job) do |f| %>
+    <div class="field">
+      <%= f.label :title, t("job.title") %>
+      <%= f.text_field :title, :class => "text" %>
+    </div>
+    <div class="field">
+      <%= f.label :category, t("job.category") %>
+      <%= f.text_field :category, :class => "text" %>
+    </div>
+    <div class="field">
+      <%= f.label :location, t("job.location") %>
+      <%= f.text_field :location, :class => "text" %>
+    </div>
+    <div class="field">
+      <%= f.label :company_name, t("job.company_name") %>
+      <%= f.text_field :company_name, :class => "text" %>
+    </div>
+    <div class="field">
+      <%= f.label :contact_info, t("job.contact_info") %>
+      <%= f.text_field :contact_info, :class => "text" %>
+    </div>
+    <div class="field">
+      <%= f.label :description, t("job.description") %>
+      <%= f.text_field :description, :class => "text", :class => "input-large" %>
+    </div>
+    <%= f.submit "Post", class: "btn btn-primary" %>
+  <% end %>
+</div>

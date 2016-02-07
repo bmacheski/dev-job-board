@@ -1,0 +1,24 @@
+<% provide(:title, "Jobs") %>
+<h1>Jobs</h1>
+<div>
+  <table class="table">
+     <thead>
+        <tr>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Location</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+    <tbody>
+      <% @jobs.each do |job| %>
+        <tr>
+          <td><%= link_to job.title, job_path(job) %></td>
+          <td><%= job.category %></td>
+          <td><%= job.location %></td>
+          <td><%= job.company_name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
